@@ -10,5 +10,9 @@
 </h1>
 
 <P>  The time on the server is ${serverTime}. </P>
+
+<a href="empform">Add Employee</a>  
+<a href="viewemp">View Employees</a>  
+
 </body>
 </html>

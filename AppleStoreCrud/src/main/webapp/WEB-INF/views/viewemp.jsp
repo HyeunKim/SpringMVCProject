@@ -8,7 +8,7 @@
 	<title>Insert title here</title>
 </head>
 <body>
-	<h1>Employees List</h1>  
+	<h1>Product List</h1>  
 	<table border="2" width="70%" cellpadding="2">  
 		<tr>
 			<th>Id</th>

@@ -15,11 +15,11 @@ public class EmpDao {
 	    this.template = template;    
 	}    
 	public int save(Emp p){    
-	    String sql="insert into AppleStore(category,background_color,title,description,price) values('"+p.getCategory()+"','"+p.getBackground_color()+"','"+p.getTitle()+"','"+p.getDescription()+"','"+p.getPrice()+"')";    
+	    String sql="insert into AppleStore(category,background_color,title,description,price,small_title) values('"+p.getCategory()+"','"+p.getBackground_color()+"','"+p.getTitle()+"','"+p.getDescription()+"','"+p.getPrice()+"','"+p.getSmall_title()+"')";    
 	    return template.update(sql);    
 	}    
 	public int update(Emp p){    
-	    String sql="update AppleStore set category='"+p.getCategory()+"', background_color='"+p.getBackground_color()+"', title='"+p.getTitle()+"', description='"+p.getDescription()+"', price='"+p.getPrice()+"' where id="+p.getId()+"";    
+	    String sql="update AppleStore set category='"+p.getCategory()+"', background_color='"+p.getBackground_color()+"', title='"+p.getTitle()+"', description='"+p.getDescription()+"', price='"+p.getPrice()+"', small_title='"+p.getSmall_title()+"' where id="+p.getId()+"";    
 	    return template.update(sql);    
 	}    
 	public int delete(int id){    
@@ -41,6 +41,7 @@ public class EmpDao {
 	            e.setDescription(rs.getString(5));
 	            e.setPrice(rs.getString(6));
 	            e.setRegdate(rs.getDate(7));
+	            e.setSmall_title(rs.getString(8));
 	            return e;    
 	        }    
 	    });    

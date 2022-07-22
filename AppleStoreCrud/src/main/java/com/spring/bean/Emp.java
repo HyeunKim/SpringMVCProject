@@ -10,6 +10,7 @@ public class Emp {
 	private String description;
 	private String price;   
 	private Date regdate;
+	private String small_title;
 	    
 	public int getId() {    
 	    return id;    
@@ -52,5 +53,11 @@ public class Emp {
 	}
 	public void setPrice(String price) {
 		this.price = price;
+	}
+	public String getSmall_title() {
+		return small_title;
+	}
+	public void setSmall_title(String small_title) {
+		this.small_title = small_title;
 	}    
 }

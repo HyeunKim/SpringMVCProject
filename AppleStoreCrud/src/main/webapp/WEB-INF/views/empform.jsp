@@ -19,6 +19,10 @@
 	          	<td><form:input path="background_color" /></td>  
          	</tr>   
          	<tr>    
+		    	<td>Small Title : </td>   
+		        <td><form:input path="small_title"  /></td>  
+         	</tr>  
+         	<tr>    
 		    	<td>Title : </td>   
 		        <td><form:input path="title"  /></td>  
          	</tr>    

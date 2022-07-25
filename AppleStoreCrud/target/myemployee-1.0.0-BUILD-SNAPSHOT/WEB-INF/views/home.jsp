@@ -5,14 +5,14 @@
 	<title>Home</title>
 </head>
 <body>
-<h1>
+<!-- <h1>
 	Hello world!  
-</h1>
+</h1> -->
 
-<P>  The time on the server is ${serverTime}. </P>
-
-<a href="empform">Add Employee</a>  
-<a href="viewemp">View Employees</a>  
+<%-- <P>  The time on the server is ${serverTime}. </P>
+ --%>
+<a href="empform">Add Product</a>  
+<a href="viewemp">View Product</a>  
 
 </body>
 </html>

@@ -19,7 +19,7 @@ public class EmpDao {
 	    return template.update(sql);    
 	}    
 	public int update(Emp p){    
-	    String sql="update AppleStore set category='"+p.getCategory()+"', background_color='"+p.getBackground_color()+"', title='"+p.getTitle()+"', description='"+p.getDescription()+"', price='"+p.getPrice()+"', small_title='"+p.getSmall_title()+"', img_url'"+p.getImg_url()+"' where id="+p.getId()+"";    
+	    String sql="update AppleStore set category='"+p.getCategory()+"', background_color='"+p.getBackground_color()+"', title='"+p.getTitle()+"', description='"+p.getDescription()+"', price='"+p.getPrice()+"', small_title='"+p.getSmall_title()+"', img_url='"+p.getImg_url()+"' where id="+p.getId()+"";    
 	    return template.update(sql);    
 	}    
 	public int delete(int id){    

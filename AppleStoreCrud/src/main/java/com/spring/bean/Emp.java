@@ -11,6 +11,7 @@ public class Emp {
 	private String price;   
 	private Date regdate;
 	private String small_title;
+	private String img_url;
 	    
 	public int getId() {    
 	    return id;    
@@ -59,5 +60,11 @@ public class Emp {
 	}
 	public void setSmall_title(String small_title) {
 		this.small_title = small_title;
+	}
+	public String getImg_url() {
+		return img_url;
+	}
+	public void setImg_url(String img_url) {
+		this.img_url = img_url;
 	}    
 }

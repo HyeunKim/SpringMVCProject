@@ -37,6 +37,10 @@
 		    <tr>    
 		        <td>Price :</td>    
 		        <td><form:input path="price" /></td>  
+	        </tr>  
+	        <tr>    
+		        <td>Image URL :</td>    
+		        <td><form:input path="img_url" /></td>  
 	        </tr>   
 	           
 	        <tr>    

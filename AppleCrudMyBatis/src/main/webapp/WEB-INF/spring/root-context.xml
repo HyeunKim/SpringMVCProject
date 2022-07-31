@@ -4,5 +4,38 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
 	
 	<!-- Root Context: defines shared resources visible to all other web components -->
-		
+	<bean id="ds" class="org.springframework.jdbc.datasource.DriverManagerDataSource">    
+		<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>    
+		<property name="url" value="jdbc:mysql://db4free.net:3306/hyeeun_db"></property>    
+		<property name="username" value="hyeeun"></property>    
+		<property name="password" value="Meme0110"></property>    
+	</bean>
+	
+	<bean id="jt" class="org.springframework.jdbc.core.JdbcTemplate">    
+		<property name="dataSource" ref="ds"></property>    
+	</bean>    
+	    
+	<bean id="dao" class="com.spring.dao.EmpDao">    
+		<property name="template" ref="jt"></property>    
+	</bean>
+	
+	<bean id="dataSource"
+	    class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+	    <property name="driverClassName"
+	        value="com.mysql.jdbc.Driver" />
+	    <property name="url"
+	        value="jdbc:mysql://로컬호스트/DB이름?useSSL=false" />
+	    <property name="username" value="DB사용자ID" />
+	    <property name="password" value="DB비밀번호" />
+	</bean>
+	<bean id="sqlSessionFactory"
+	    class="org.mybatis.spring.SqlSessionFactoryBean">
+	    <property name="dataSource" ref="dataSource"></property>
+	    <property name="configLocation" value="classpath:mybatis-config.xml"/>
+	    <property name="mapperLocations" value="classpath:mappers/*-mapper.xml"></property>
+	</bean>
+	
+	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate" destroy-method="clearCache">
+	    <constructor-arg name="sqlSessionFactory" ref="sqlSessionFactory"/>
+	</bean>
 </beans>
